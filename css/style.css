@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     width: 100%;
@@ -9,20 +10,27 @@ body{
     background-color: hsl(217, 54%, 11%);
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container{
     min-width: 327px;
+    width: 80%;
     max-width: 350px;
-    margin: 4rem auto;
     background-color: hsl(216, 50%, 16%);
     border-radius: 15px;
     padding: 2em;
+
 }
+
 
 .image-nft{
     width: 100%;
     border-radius: 15px;
+    position: relative;
 }
+
 
 h2 {
     margin-top: 1.5rem;
@@ -48,7 +56,7 @@ h2 {
 .price{
     color: hsl(178, 100%, 50%);
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .price:before{
@@ -59,12 +67,40 @@ h2 {
 
 .duration{
     color: hsl(215, 51%, 70%);
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
 }
 
 .duration:before{
     content: url('../images/icon-clock.svg');
 
     margin-right: 0.2em;
+}
+
+.author{
+    display: flex;
+    justify-content: flex-star;
+    align-items: center;
+    margin-top: 1.2rem;
+    color: hsl(215, 51%, 70%);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:active, 
+a:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+
+.avatar {
+    border-radius: 100%;
+    border: 1px solid white;
+    height: 2rem;
+    margin-right: 1.0em;
 }
