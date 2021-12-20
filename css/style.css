@@ -51,8 +51,20 @@ h2 {
     font-size: 1.2rem;
 }
 
+.price:before{
+    content: url('../images/icon-ethereum.svg');
+    height: 1rem;
+    margin-right: 0.2em;
+}
+
 .duration{
     color: hsl(215, 51%, 70%);
     font-weight: 300;
     font-size: 1.2rem;
+}
+
+.duration:before{
+    content: url('../images/icon-clock.svg');
+
+    margin-right: 0.2em;
 }
