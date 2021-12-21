@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 body{
     width: 100%;
@@ -21,14 +21,45 @@ body{
     background-color: hsl(216, 50%, 16%);
     border-radius: 15px;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+
 
 }
 
 
 .image-nft{
     width: 100%;
+    height: auto;
     border-radius: 15px;
+    display: block;
+}
+
+.image-container{
     position: relative;
+}
+
+.image-container:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.5;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.image-container:hover::after{
+    position: absolute;
+    content: url('../images/icon-view.svg');
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 50%;
 }
 
 
@@ -44,6 +75,7 @@ h2 {
     font-size: 1.2rem;
     line-height: 1.6rem;
 }
+
 
 .details{
     padding: 1rem 0 1rem;
